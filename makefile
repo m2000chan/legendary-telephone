@@ -1,14 +1,9 @@
-all: control.c
+all: control.c main.c
 	gcc -o control control.c
+	gcc -o main main.c
 
-run: control
-	./control -r
-	./control -c 4
-	./control -v
-	./control -c 3
-	./control -v
-	./control -r
+run: control main
 
-clean: *~ *.out
-	rm *~
-	rm *.out
+clean: control main
+	rm control
+	rm main
